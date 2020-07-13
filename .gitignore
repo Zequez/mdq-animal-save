@@ -8,6 +8,10 @@ node_modules/
 !/src/assets/fontello/css
 /src/assets/fontello/css/*
 !/src/assets/fontello/css/fontello-embedded.css
+!/src/assets/fontello/font
+/src/assets/fontello/font/*
+!/src/assets/fontello/font/fontello.eot
+!/src/assets/fontello/font/fontello.svg
 *.log
 
 # OS generated files
