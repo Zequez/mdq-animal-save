@@ -1,0 +1,10 @@
+extends ../layout.pug
+block title
+    - var page = pages["/acerca"]
+    = page.title
+block header
+    +back-button(page.back)
+block content
+    each c in page.components
+        +component(c)
+    script(src='../index.js')

@@ -1,0 +1,29 @@
+{
+  "name": "mdq-animal-save",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "clean": "rm -rf dist .parcel-cache",
+    "watch": "parcel watch src/index.pug src/**/*.pug",
+    "serve": "browser-sync start -s dist --no-open",
+    "start": "npm-run-all clean --parallel watch serve --print-label",
+    "build-prod": "parcel build src/index.pug src/**/*.pug"
+  },
+  "dependencies": {
+    "assets": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "browser-sync": "^2.26.7",
+    "http-server": "^0.12.3",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.0.0-beta.1",
+    "prettier": "^2.0.5",
+    "pug": "^3.0.0",
+    "sass": "^1.26.10"
+  }
+}

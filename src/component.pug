@@ -1,0 +1,30 @@
+mixin component(c)
+    .component(class=`component-${c.type}`)
+        case c.type
+            when "card-tile"
+                .card-tile
+                    h2= c.title
+                    p= c.body
+                    a.button(href=c.actionLink)= c.actionText
+            when "button-tile"
+                a.button-tile(href=c.link)
+                    if c.icon
+                        i(class=`icon-${c.icon}`)
+                    span= c.text
+                    i.icon-right-open
+            when "social-networks-tile"
+                .social-networks-tile
+                    each social in c.order
+                        case social
+                            when "instagram"
+                                a(href=`https://instagram.com/${c.instagram}` aria-label="Instagram")
+                                    i.icon-instagram
+                                    | @#{c.instagram}
+                            when "facebook"
+                                a(href=`https://www.facebook.com/${c.facebook}` aria-label="Facebook")
+                                    i.icon-facebook
+                            when "twitter"
+                                a(href=`https://twitter.com/${c.twitter}` aria-label="Twitter")
+                                    i.icon-twitter
+            when "content"
+                .content!= c.content
